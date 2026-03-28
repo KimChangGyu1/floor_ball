@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #2f80ed;
+  --color-sky: #56ccf2;
+  --color-navy: #1f3c88;
+  --color-bg: #f4f8ff;
+  --color-card: #ffffff;
+  --color-text: #1f2d3d;
+  --color-soft: #eef6ff;
+  --color-line: #cfe3ff;
+  
+  --radius-xl: 24px;
+  --shadow-custom: 0 10px 24px rgba(31, 45, 61, 0.10);
+}
+
+@layer base {
+  body {
+    @apply m-0 text-text;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: linear-gradient(to bottom, #eef6ff 0%, #f9fbff 100%);
+  }
+}
+
+.video-placeholder {
+  min-height: 280px;
+  border: 2px dashed #9fc7ed;
+  background: #f8fbff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #55789e;
+  padding: 22px;
+  line-height: 1.8;
+}
+
+.material-btn {
+  @apply border-none no-underline inline-flex items-center justify-center min-w-[150px] px-[18px] py-3 rounded-[14px] text-[0.98rem] font-bold cursor-pointer transition-all duration-200 bg-blue text-white hover:bg-[#1f6fd8] hover:-translate-y-0.5;
+}
+
+.back-btn {
+  @apply border-none no-underline inline-flex items-center justify-center min-w-[150px] px-[18px] py-3 rounded-[14px] text-[0.98rem] font-bold cursor-pointer transition-all duration-200 bg-[#e9f2ff] text-[#21548b] hover:bg-[#dbeaff] hover:-translate-y-0.5;
+}
+
+.card-illustration {
+  @apply w-full aspect-[4/3] rounded-[20px] bg-linear-to-br from-[#eaf5ff] to-[#d8efff] flex items-center justify-center p-2.5 mb-3.5 overflow-hidden;
+}
+
+.menu-card {
+  @apply bg-card rounded-xl p-[18px] border-3 border-transparent cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-[#99d6ff];
+  box-shadow: 0 10px 24px rgba(31, 45, 61, 0.10);
+}
+
+.menu-card:hover {
+  box-shadow: 0 16px 28px rgba(31, 45, 61, 0.13);
+}
+
+.detail-box {
+  @apply bg-white rounded-xl p-[26px] border border-[#edf3ff];
+  box-shadow: 0 10px 24px rgba(31, 45, 61, 0.10);
+}
+
+.section-card {
+  @apply bg-soft border border-line rounded-[18px] p-[18px];
+}
